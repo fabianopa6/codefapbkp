@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+
+
+
+  root 'login#index'
+
+
+  resources :login
+
+  resources :dashboard_student
+
+  resources :dashboard_professor
+
+
+
+  match 'autenticar', controller: 'login', action: 'doLogin', via: 'POST'
+
+
+
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

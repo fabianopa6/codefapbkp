@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>
+    CodeFAP
+  </title>
+  <%= stylesheet_link_tag "application", :media => "all" , :href => "/assets/login.scss" , 'data-turbolinks-track' => true%>
+</head>
+<body>
+
+<div>
+  <%= render partial: "layouts/header" %>
+</div>
+
+
+<div class="box" >
+
+      <div class="textindex2">
+        <p>Seja Bem-Vindo!</p>
+        <p></p>
+      </div>
+
+  <%= form_for @user, :url => {:action => "doLogin"} do |f|  %>
+
+      <div class="form-group">
+        <%= f.text_field :login, :autofocus => true, class: "form-control", placeholder: "Matrícula" ,value:""%></td>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password ,class: "form-control", placeholder: "Senha"%></td>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :user_type ,class: "form-control", placeholder: "Tipo"%></td>
+      </div>
+
+      <div class="form-group" align="right">
+        <%= f.button('Entrar', class: "btn btn-info")%>
+      </div>
+  <%end%>
+
+</div>
+
+<div class="img-center">
+        <%= image_tag("codefap.png", :class =>"img-responsive") %>
+</div>
+
+<div class="text-home">
+  <p>Protótipo de Apoio ao Curso de Sistemas de Informação</p>
+</div>
