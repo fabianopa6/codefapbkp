@@ -11,9 +11,13 @@ Rails.application.routes.draw do
 
   resources :dashboard_professor
 
+  resources :subject
+
 
 
   match 'autenticar', controller: 'login', action: 'doLogin', via: 'POST'
+  match 'showing', controller: 'dashboard_student', action: 'show', via: 'POST'
+  match 'showing', controller: 'dashboard_student', action: 'show', via: 'GET'
 
 
 

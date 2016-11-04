@@ -6,17 +6,24 @@
 
 <div>
   <%= render partial: "layouts/headerDashboard" %>
-  <h1 class="container">Teste</h1>
 </div>
 
-  <h1 class="container">Disciplinas:</h1>
-
-  <div class="book-show"></div>
-
-<div class="box">
 
  
 
 
-</div>
+  <div class="container">
+
+  	<div class="subjects">
+	  	<% @subjects.each do |subject| %>
+	  	<div class="subject-box">
+	        
+	        	   <%= link_to subject.name, root_path, class: "textsubject" %>
+	         
+	        </div>
+	    <% end %>	
+
+  	</div>
+        
+  </div>
 
